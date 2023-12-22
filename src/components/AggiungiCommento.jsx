@@ -10,7 +10,7 @@ class AggiungiCommento extends React.Component {
         },
     };
 
-    sendComment = async (e) => {
+    inviaCommento = async (e) => {
         e.preventDefault();
         try {
             let response = await fetch(
@@ -46,7 +46,7 @@ class AggiungiCommento extends React.Component {
     render() {
         return (
             <div className="mb-3">
-                <Form onSubmit={this.sendComment}>
+                <Form onSubmit={this.inviaCommento}>
                     <Form.Group>
                         <Form.Label className="text-white my-3">Cosa ne pensi?</Form.Label>
                         <Form.Control
