@@ -26,7 +26,7 @@ class AggiungiCommento extends React.Component {
                 }
             );
             if (response.ok) {
-                alert("Recensione inoltrata");
+                alert("Recensione andata a buon termine");
                 this.setState({
                     comment: {
                         comment: "",
@@ -48,7 +48,7 @@ class AggiungiCommento extends React.Component {
             <div className="mb-3">
                 <Form onSubmit={this.sendComment}>
                     <Form.Group>
-                        <Form.Label className="text-white">Cosa ne pensi?</Form.Label>
+                        <Form.Label className="text-white my-3">Cosa ne pensi?</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Commento"
@@ -84,9 +84,11 @@ class AggiungiCommento extends React.Component {
                             <option>5</option>
                         </Form.Control>
                     </Form.Group>
-                    <Button className="mt-3" variant="primary" type="submit">
-                        Invia
-                    </Button>
+                    <div className="d-flex justify-content-center">
+                        <Button className="my-3 w-50" variant="secondary" type="submit">
+                            Invia
+                        </Button>
+                    </div>
                 </Form>
             </div>
         );

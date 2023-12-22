@@ -58,11 +58,17 @@ footer {
 }
 
 .col img {
-  transition: transform 0.2s;
+  transition: transform 0.5s;
 }
 
 .col img:hover {
   transform: scale(1.1);
+  padding: 7%;
+}
+
+.col img{
+  border-radius: 45px;
+  padding: 7%;
 }
 
 .altezza {
@@ -72,4 +78,12 @@ footer {
 .redFire{
   background-color: red;
   color: black;
+  height: 6vh;
+  margin-left: 2%;
+}
+
+.bg-recensione{
+  background-color: rgb(41, 41, 41);
+  border-radius: 10px;
+  padding: 2%;
 }

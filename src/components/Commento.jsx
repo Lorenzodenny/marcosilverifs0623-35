@@ -26,7 +26,7 @@ const Commento = (props) => {
 
 
     return (
-        <Col className="d-flex justify-content-between">
+        <Col className="d-flex justify-content-between align-items-center my-3 ms-3 bg-recensione">
             <p className='text-white'>Recensione: {props.commento.comment}</p>
             <Button  className='redFire' onClick={() => deleteComment(props.commento._id)}>
                 cancella
