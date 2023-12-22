@@ -9,8 +9,9 @@ class Film extends React.Component{
 
     render() {
     return(
-        <Col className="altezza" onClick={() => this.setState({selected: !this.state.selected})}>
-            <img src={this.props.film.Poster} />
+        <Col className="altezza" >
+            <div onClick={() => this.setState({selected: !this.state.selected})}>
+                <img src={this.props.film.Poster} /></div>
             {this.state.selected && <ZonaCommenti id={this.props.film.imdbID} />}
         </Col>
     )}

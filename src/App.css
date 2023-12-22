@@ -68,3 +68,8 @@ footer {
 .altezza {
   height: 70vh;
 }
+
+.redFire{
+  background-color: red;
+  color: black;
+}

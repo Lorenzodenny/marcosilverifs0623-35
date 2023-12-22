@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap";
+import Commento from "./Commento";
 
 const ListaCommenti = (props) => {
     return(
@@ -10,9 +11,7 @@ const ListaCommenti = (props) => {
                         </Col>
                     ) : (
                         props.commenti.map((commento) => (
-                            <Col>
-                                <p className='text-white'>Commento: {commento.comment}</p>
-                            </Col>
+                            <Commento key={commento._id} commento = {commento} />
                         ))
                     )}
                 </Row>

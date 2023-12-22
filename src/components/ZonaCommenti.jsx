@@ -1,6 +1,7 @@
 import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import ListaCommenti from './ListaCommenti'
+import AggiungiCommento from './AggiungiCommento'
 // import CommentList from './CommentList'
 // import AddComment from './AddComment'
 
@@ -16,10 +17,10 @@ class ZonaCommenti extends React.Component {
     try {
       let response = await fetch(
         'https://striveschool-api.herokuapp.com/api/comments/' +
-          this.props.imdbID,
+          this.props.id,
         {
           headers: {
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0MmJkMWI1MjViYjAwMThlZDA3YjAiLCJpYXQiOjE3MDMxNjA3ODUsImV4cCI6MTcwNDM3MDM4NX0.hPuw6zmzOPFeijuIZWkvyt-vMT8yAYe4u1mSHcgb0Qo',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcyZGYxYzBkOGEyMDAwMThhNDhiOTUiLCJpYXQiOjE3MDMyNTc2MTEsImV4cCI6MTcwNDQ2NzIxMX0.UMUz_ja-wJ7dA4iFbq7P1BGiG3ggWCw0ogbjZizsrDc',
           },
         }
       )
@@ -41,7 +42,7 @@ class ZonaCommenti extends React.Component {
     return (
       <div>
         <ListaCommenti commenti= {this.state.comments} />
-        
+        <AggiungiCommento asin= {this.props.id} />
       </div>
     )
   }
