@@ -64,3 +64,5 @@ class BarraRicerca extends Component {
 }
 
 export default BarraRicerca;
+
+//ok
